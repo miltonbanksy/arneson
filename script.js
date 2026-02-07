@@ -51,16 +51,16 @@ const displayResult = document.querySelector('#display-result');
 document.querySelector('#btn-advantage').addEventListener('click', () => {
     let result = rollxd6(3);
     result = sumArray(removeSmallest(result));
-    displayResult.innerHTML =  result;
+    displayResult.innerHTML =  `Highest of 3d6: ${result}`;
 });
 
 document.querySelector('#btn-standard').addEventListener('click', () => {
     result = sumArray(rollxd6(2));
-    displayResult.innerHTML =  result;
+    displayResult.innerHTML =  `Sum of 2d6: ${result}`;
 });
 
 document.querySelector('#btn-disadvantage').addEventListener('click', () => {
     let result = rollxd6(3);
     result = sumArray(removeHighest(result));
-    displayResult.innerHTML =  result;
+    displayResult.innerHTML =  `Lowest of 3d6: ${result}`;
 });
